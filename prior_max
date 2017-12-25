@@ -1,0 +1,12 @@
+#Transformation for prior distribution which has the maximum
+
+tr<-function(x,maxval=1){
+  maxval*(1-1/exp(x))
+}
+
+#example
+x<-rnorm(10000,0,1)  #It can be an arbitrary continous probability distribution.
+
+y<-tr(x,10)
+hist(y)  
+
